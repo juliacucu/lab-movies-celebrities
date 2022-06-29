@@ -15,8 +15,12 @@ const MovieModel = require('../models/Movie.model');
 
     router.post("/movies/create", (req, res, next) => {
     const { title, genre, plot, cast } = req.body;
-        MovieModel.create({ title, genre, plot, cast })
-            .then((createdMovie) => res.redirect("/movies"))
+    console.log('cast', cast)
+        MovieModel.create({ title, genre, plot, cast }) 
+            .then((createdMovie) => { 
+              console.log(createdMovie)
+              res.redirect("/movies")
+            })
             .catch((error) => next(error));
   })
 
