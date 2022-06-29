@@ -1,0 +1,19 @@
+<h2>Movie Details</h2>
+
+
+ <div>
+      <h3><b>Title:</b> {{response.title}}</h3>
+      <p><b>Genre:</b> {{response.genre}}</p>
+      <p><b>Plot:</b> {{response.plot}}</p>
+       <p><b>Plot:</b> {{response.cast}}</p>
+    
+    </div>
+    {{#each cast}}
+  <br>
+  {{this.name}}
+  {{this.occupation}}
+  {{this.catchPhrase}}
+  </br>
+    {{/each}}
+</div>
+
